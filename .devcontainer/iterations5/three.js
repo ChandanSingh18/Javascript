@@ -27,5 +27,14 @@ map.set("IN", "India")
 console.log(map.get("IN"));
 
 for(const [key, value] of map){
+    // console.log(key, ":-", value);
+}
+
+const myobject = {
+    name: "chandan",
+    name2:"singh"
+}
+
+for( const [key, value]of myobject){
     console.log(key, ":-", value);
 }
