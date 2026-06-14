@@ -1,0 +1,51 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Arial, sans-serif;
+  transition: 0.4s;
+}
+
+.container{
+  text-align: center;
+  margin-top: 100px;
+}
+
+h1{
+  margin-bottom: 30px;
+}
+
+.buttons{
+  margin-bottom: 30px;
+}
+
+.btn{
+  width: 80px;
+  height: 80px;
+  border: 2px solid black;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.orange{
+  background-color: orange;
+}
+
+.black{
+  background-color: black;
+}
+
+.blue{
+  background-color: blue;
+}
+
+.green{
+  background-color: green;
+}
+
+h2{
+  margin-top: 20px;
+}
