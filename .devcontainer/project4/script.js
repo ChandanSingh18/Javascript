@@ -60,12 +60,38 @@ function checkGuess(guess) {
 }
  
 function displayGuess(guess) {
-    userInput.value = ''
-    guessSlot.innerHTML += '${guess}'
+    userinput.value = ''
+    guessSlot.innerHTML += '${guess} ';
     numGuess++;
     remaining.innerHTML = '${11 - numGuess}'
 }
 
 function displayMessage(guess) {
+lowOrHi.innerHTML = '<h2>${message}</h2>';
+}
 
+
+function endGame() {
+    userinput.value = '';
+    userinput.setAttribute('disabled', '');
+    p.classList.add('button');
+    p.innerHTML = '<h2 id = "newGame"></h2>';
+    startOver.appendChild(p);
+    playGame = false;
+    newGame();
+}
+
+function newGame() {
+    const newGameButton = document.querySelector('#newGame');
+    newGameButton.addEventListener('click', function(e){
+        randomNumber = parseInt(Math.random() * 100 + 1);
+        prevGuss = []
+        numGuess = 1
+        guessSlot.innerHTML = '';
+        remaining.innerHTML = '${11 - numGuess}';
+        userinput.removeAttribute('disabled')
+        startOver.removeChild(p)
+
+        playGame = true;
+    })
 }
